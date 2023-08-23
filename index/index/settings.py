@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'django_extensions',
+    'banners',
 ]
 
 MIDDLEWARE = [
