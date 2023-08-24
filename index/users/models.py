@@ -5,8 +5,8 @@ class UserProfile(BaseModel):
     UNKNOWN = 'UNKNOWN'
 
     REGION_CHOICES = (
-        (1, 'Tashkent'),
-        (2, 'Samarkand')
+        ('Tashkent', 'Tashkent'),
+        ('Samarkand', 'Samarkand')
 
     )
 
@@ -18,7 +18,7 @@ class UserProfile(BaseModel):
     region = models.CharField(max_length=255, choices=REGION_CHOICES, default=UNKNOWN)
     password = models.CharField(max_length=255)
     payment_status = models.BooleanField(default=False)
-    basket = models.JSONField(default=list)
+    basket = models.JSONField(default=list, null=True, blank=True)
 
     def __str__(self):
         return self.username
