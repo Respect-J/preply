@@ -35,6 +35,7 @@ APPS = [
     'banners',
     'categories',
     'subjects',
+    'topics'
 ]
 
 INSTALLED_APPS = [
