@@ -9,3 +9,13 @@ class BaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class Language(models.Model):
+    title_uz = models.CharField(max_length=256)
+    title_ru = models.CharField(max_length=256)
+    title_ka = models.CharField(max_length=256)
+    title_en = models.CharField(max_length=256)
+
+    class Meta:
+        abstract = True
