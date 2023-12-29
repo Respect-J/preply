@@ -9,14 +9,12 @@ class Language(Enum):
     UZ = "UZ"
     EN = "EN"
     RU = "RU"
-    KAA = "KAA"
 
 
 class LanguageChoice(models.TextChoices):
     UZ = Language.UZ.value, "Uzbek"
     EN = Language.EN.value, "English"
     RU = Language.RU.value, "Russian"
-    KAA = Language.KAA.value, "Kazakh"
 
 
 class Answers(Enum):

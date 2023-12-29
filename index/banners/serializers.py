@@ -5,4 +5,4 @@ from .models import Banners
 class BannersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banners
-        fields = '__all__'
+        fields = ('title_uz', 'title_ru', 'link', 'image')
