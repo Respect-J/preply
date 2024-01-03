@@ -30,14 +30,25 @@ class AnswersChoice(models.TextChoices):
     C = Answers.C.value, "c"
     D = Answers.D.value, "d"
 
+""" 
+    "language": null,
+    "is_mandatory": false,
+    "correct_answer": null,
+    "options": null,
+    "subject": null,
+    "topic": null
+    
+"""
 
 class Tests(BaseModel):
     subject = models.ForeignKey(Subjects, on_delete=models.CASCADE)
     topic = models.ForeignKey(Topics, on_delete=models.CASCADE)
     language = models.CharField(max_length=3, choices=LanguageChoice.choices)
     is_mandatory = models.BooleanField(default=False)
-    correct_answer = models.CharField(max_length=3, choices=AnswersChoice.choices)
-    options = models.JSONField()
+    question = models.TextField(null=True)
+    img = models.FileField(upload_to="img/tests/")
+    correct_answer = models.CharField(choices=AnswersChoice.choices)
+    options = models.JSONField(null=True)
 
     def __str__(self):
         return f"Test on {self.subject} - {self.topic} ({self.language})"
