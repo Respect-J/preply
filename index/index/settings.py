@@ -36,7 +36,8 @@ APPS = [
     'categories',
     'subjects',
     'topics',
-    'tests'
+    'tests',
+    'solves'
 ]
 
 INSTALLED_APPS = [
@@ -87,11 +88,11 @@ WSGI_APPLICATION = 'index.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres', # Название базы данных, которую ты создал
-        'USER': 'postgres', # Твое имя пользователя PostgreSQL
-        'PASSWORD': '123', # Твой пароль PostgreSQL
-        'HOST': 'localhost', # Может потребоваться изменить, если PostgreSQL запущен на другом хосте
-        'PORT': '5432', # По умолчанию используется порт PostgreSQL
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

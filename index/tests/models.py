@@ -46,7 +46,7 @@ class Tests(BaseModel):
     language = models.CharField(max_length=3, choices=LanguageChoice.choices)
     is_mandatory = models.BooleanField(default=False)
     question = models.TextField(null=True)
-    img = models.FileField(upload_to="img/tests/")
+    img = models.FileField(upload_to="img/tests/", null=True)
     correct_answer = models.CharField(choices=AnswersChoice.choices)
     options = models.JSONField(null=True)
 
