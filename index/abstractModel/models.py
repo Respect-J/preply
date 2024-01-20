@@ -1,3 +1,5 @@
+from enum import Enum
+
 from django.db import models
 import uuid
 
@@ -18,3 +20,14 @@ class Language(models.Model):
 
     class Meta:
         abstract = True
+
+class Language2(Enum):
+    UZ = "UZ"
+    EN = "EN"
+    RU = "RU"
+
+
+class LanguageChoice(models.TextChoices):
+    UZ = Language2.UZ.value, "Uzbek"
+    EN = Language2.EN.value, "English"
+    RU = Language2.RU.value, "Russian"

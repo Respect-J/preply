@@ -1,20 +1,8 @@
 from django.db import models
-from abstractModel.models import BaseModel
+from abstractModel.models import BaseModel, LanguageChoice
 from subjects.models import Subjects
 from topics.models import Topics
 from enum import Enum
-
-
-class Language(Enum):
-    UZ = "UZ"
-    EN = "EN"
-    RU = "RU"
-
-
-class LanguageChoice(models.TextChoices):
-    UZ = Language.UZ.value, "Uzbek"
-    EN = Language.EN.value, "English"
-    RU = Language.RU.value, "Russian"
 
 
 class Answers(Enum):

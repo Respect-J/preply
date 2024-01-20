@@ -37,7 +37,8 @@ APPS = [
     'subjects',
     'topics',
     'tests',
-    'solves'
+    'solves',
+    'PDF'
 ]
 
 INSTALLED_APPS = [
