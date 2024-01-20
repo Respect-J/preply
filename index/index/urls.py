@@ -25,6 +25,7 @@ urlpatterns = [
     path('api/subjects/', include('subjects.urls')),
     path('api/topics/', include('topics.urls')),
     path('api/tests/', include('tests.urls')),
-    path('api/solves/', include("solves.urls"))
+    path('api/solves/', include("solves.urls")),
+    path('api/pdf/', include("PDF.urls"))
 
 ]
